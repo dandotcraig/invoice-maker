@@ -10,7 +10,7 @@ export const Balance = () => {
 
   return (
     <>
-        <h4>Your Balance</h4>
+        <h3 className="text-base font-semibold leading-7 text-gray-900">Balance due</h3>
         <h1>${total}</h1>
     </>
     
