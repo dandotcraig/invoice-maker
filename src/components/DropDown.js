@@ -7,27 +7,28 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function DropDown() {
+export default function DropDown({setClientSent}) {
   const [companyName, setCompanyName] = useState("")
 
   const clients = [
-    {company: "Client 1", value: 1},
-    {company: "Client 2", value: 2},
-    {company: "Client 3", value: 3}
+    {company: "Client 1", value: 1, address: "32 First st NSW 200"},
+    {company: "Client 2", value: 2, address: "65 Second st NSW 200"},
+    {company: "Client 3", value: 3, address: "19 Third st NSW 200"}
   ]
 
   function handleSelect(event) {
     setCompanyName(event.target.value)
-    console.log(event.target.value)
+    setClientSent(event.target.value)
+    // setClientSent(client)
   }
 
   return (
     <>
-      <p>{companyName}</p>
+      {/* <p>{companyName}</p> */}
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-            {/* Client */}
+            {companyName || "Select client"}
             <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
           </MenuButton>
         </div>
