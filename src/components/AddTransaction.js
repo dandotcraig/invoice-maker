@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import DropDown from './DropDown';
 
 
 
@@ -28,6 +29,9 @@ export const AddTransaction = () => {
             <p className="mt-1 text-sm leading-6 text-gray-600">
                 This information will be displayed within the invoice so be careful it's correct.
             </p>
+            <div className=' flex justify-end'>
+                <DropDown />
+            </div>
             <form onSubmit={onSubmit}>
                 <div className="form-control">
                     <label htmlFor="price" className="block text-sm font-medium leading-6 text-gray-900">Description</label>

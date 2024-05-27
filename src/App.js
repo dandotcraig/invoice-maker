@@ -6,19 +6,18 @@ import { IncomeExpenses } from './components/IncomeExpenses';
 import { TransactionList } from './components/TransactionList';
 import { AddTransaction } from './components/AddTransaction';
 import { GlobalProvider } from './context/GlobalState';
-import DropDown from './components/DropDown';
+// import DropDown from './components/DropDown';
 import DateOf from './components/DateOf';
 import InvoiceNumber from './components/InvoiceNumber';
 
 function App() {
+
+  
   return (
     <GlobalProvider>
       <Header />
       <div className='h-12'/>
       {/* <div className="container"></div> */}
-      <div className=' flex justify-end'>
-        <DropDown />
-      </div>
       <AddTransaction />
       <div className='h-12'/>
       <div className='flex justify-between'>
@@ -26,6 +25,7 @@ function App() {
         <DateOf />
       </div>
       <TransactionList />
+      <div className='h-12'/>
       <IncomeExpenses />
       <Balance />
     </GlobalProvider>
