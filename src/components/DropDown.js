@@ -10,17 +10,17 @@ function classNames(...classes) {
 }
 
 export default function DropDown({setClientSent}) {
-  const context = useContext(AddressContext);
+  const { clients } = useContext(AddressContext);
 
-  console.log(context);
+  console.log(clients[1].address);
 
   const [companyName, setCompanyName] = useState("")
 
-  const clients = [
-    {company: "Client 1", value: 1, address: "32 First st NSW 200"},
-    {company: "Client 2", value: 2, address: "65 Second st NSW 200"},
-    {company: "Client 3", value: 3, address: "19 Third st NSW 200"}
-  ]
+  // const clients = [
+  //   {company: "Client 1", value: 1, address: "32 First st NSW 200"},
+  //   {company: "Client 2", value: 2, address: "65 Second st NSW 200"},
+  //   {company: "Client 3", value: 3, address: "19 Third st NSW 200"}
+  // ]
 
   function handleSelect(event) {
     setCompanyName(event.target.value)
