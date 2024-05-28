@@ -12,6 +12,7 @@ import InvoiceNumber from './components/InvoiceNumber';
 import { AddTransactionHeader } from './components/AddTransactionHeader';
 import DropDown from './components/DropDown';
 import AddressDisplay from './components/AddressDisplay';
+import { AddressProvider } from './context/AddressContext';
 
 function App() {
 
@@ -19,24 +20,26 @@ function App() {
 
   return (
     <GlobalProvider>
-      <Header />
-      <div className='h-12'/>
-      {/* <div className="container"></div> */}
-      <AddTransactionHeader />
-      <div className=' flex justify-end'>
-        <DropDown setClientSent={setClientSent}/>
-      </div>
-      <AddTransaction />
-      <div className='h-12'/>
-      <div className='flex justify-between'>
-        <InvoiceNumber />
-        <DateOf />
-      </div>
-      <AddressDisplay clientSent={clientSent}/>
-      <TransactionList />
-      <div className='h-12'/>
-      <IncomeExpenses />
-      <Balance />
+      <AddressProvider>
+        <Header />
+        <div className='h-12'/>
+        {/* <div className="container"></div> */}
+        <AddTransactionHeader />
+        <div className=' flex justify-end'>
+          <DropDown setClientSent={setClientSent}/>
+        </div>
+        <AddTransaction />
+        <div className='h-12'/>
+        <div className='flex justify-between'>
+          <InvoiceNumber />
+          <DateOf />
+        </div>
+        <AddressDisplay clientSent={clientSent}/>
+        <TransactionList />
+        <div className='h-12'/>
+        <IncomeExpenses />
+        <Balance />
+      </AddressProvider>
     </GlobalProvider>
 
   );

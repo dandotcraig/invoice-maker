@@ -24,7 +24,6 @@ export const GlobalProvider = ({ children }) => {
         });
         
     }
-
     function addTransaction(transaction) {
         console.log('Adding transaction:', transaction); 
         dispatch({
