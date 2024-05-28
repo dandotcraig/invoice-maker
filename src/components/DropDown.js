@@ -1,13 +1,19 @@
 // import { Fragment } from 'react'
 import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { AddressContext } from '../context/AddressContext'
+import { GlobalContext } from '../context/GlobalState'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function DropDown({setClientSent}) {
+  const context = useContext(AddressContext);
+
+  console.log(context);
+
   const [companyName, setCompanyName] = useState("")
 
   const clients = [
