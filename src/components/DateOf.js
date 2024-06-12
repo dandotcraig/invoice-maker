@@ -9,7 +9,7 @@ export default function DateOf() {
     const currentDate = month + "/" + date + "/" + year;
 
     return(
-        <p className="mt-1 text-sm leading-6 text-gray-600">
+        <p className="my-2.5 text-sm leading-6 text-gray-600">
             Date: {currentDate}
         </p>
     )

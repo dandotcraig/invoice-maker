@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
-import DropDown from './DropDown';
+// import DropDown from './DropDown';
 
 
 
@@ -74,7 +74,7 @@ export const AddTransaction = () => {
                 </div>
                 <button
                     // href="#"
-                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="rounded-md bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
                     Add line item
                 </button>

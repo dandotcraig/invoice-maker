@@ -7,7 +7,7 @@ export const AddTransactionHeader = () => {
             Input
         </h2>
         <p className="mt-1 text-sm leading-6 text-gray-600">
-            This information will be displayed within the invoice so be careful it's correct.
+            This information will be displayed on the invoice, make sure it's correct.
         </p>
     </>
   )

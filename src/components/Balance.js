@@ -10,8 +10,8 @@ export const Balance = () => {
 
   return (
     <>
-        <h3 className="text-base font-semibold leading-7 text-gray-900">Balance due</h3>
-        <h1>${total}</h1>
+        <h2 className="my-2.5 text-lg font-semibold leading-7 text-gray-900">Balance due</h2>
+        <h2 className="my-2.5 text-lg font-semibold leading-7 text-gray-900">${total}</h2>
     </>
     
   )

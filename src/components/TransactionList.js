@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
-import { Transaction } from './Transaction'
+
 import { TransactionItem } from './TransactionItem'
 
 export const TransactionList = () => {
@@ -10,7 +10,7 @@ export const TransactionList = () => {
 
   return (
     <>
-        <h3 className="text-base font-semibold leading-7 text-gray-900">Line items</h3>
+        <h3 className="my-2.5 text-lg font-semibold leading-7 text-gray-900">Line items</h3>
         {/* <ul className="list">
           {transactions.map(transaction => (<Transaction key={transaction.id} transaction={transaction}/>))}
           
@@ -18,7 +18,7 @@ export const TransactionList = () => {
 
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-300 dark:text-slate-950">
+                <thead className="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-200 dark:text-slate-950">
                     <tr>
                         <th scope="col" className="px-6 py-3">
                             Transaction name

@@ -1,10 +1,12 @@
 import React from "react";
+import { useSelectedDataItem } from '../context/AddressContext';
 
-export default function AddressDisplay({clientSent}) {
-    // console.log(clientSent)
+export default function DataDisplay() {
+    const selectedDataItem = useSelectedDataItem();
+
     return (
-        <div className="mt-1 text-sm leading-6 text-gray-600">
-            {clientSent}
+        <div >
+            <p className="mb-2.5 text-sm leading-6 text-gray-600">{selectedDataItem || "No client selected"}</p>
         </div>
-    )
-};
+    );
+}

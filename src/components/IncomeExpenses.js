@@ -20,11 +20,11 @@ export const IncomeExpenses = () => {
   return (
     <div className="inc-exp-container">
         <div>
-            <h3 className="text-base font-semibold leading-7 text-gray-900">Income</h3>
+            <h3 className="text-base font-semibold leading-7 text-gray-900">Total</h3>
             <p className="text-base font-semibold leading-7 text-green-500">${income}</p>
         </div>
         <div>
-          <h3 className="text-base font-semibold leading-7 text-gray-900">Expense</h3>
+          <h3 className="text-base font-semibold leading-7 text-gray-900">Deductions</h3>
             <p className="text-base font-semibold leading-7 text-red-500">${expense}</p>
         </div>
     </div>
